@@ -1,0 +1,82 @@
+TD {
+   font-size : 12px; 
+   font-family : Arial, sans-serif; 
+   color : #e0dcd3; 
+   margin : 0; 
+}
+
+
+H3 {
+   font-weight : bold; 
+   font-size : 14px; 
+   font-family : Arial, sans-serif; 
+   color : #000000; 
+}
+
+
+BODY {
+   font-size : 12px; 
+   font-family : Arial, sans-serif; 
+   color : #e0dcd3; 
+   margin : 0; 
+   padding : 0 0 5px 3px; 
+}
+
+A:visited:hover {
+   color : #fef3a2; 
+   text-decoration : none; 
+}
+
+
+A:visited {
+   color : #fc8c1d; 
+   text-decoration : none; 
+}
+
+A:hover {
+   color : #fef3a2; 
+   text-decoration : none; 
+}
+
+
+A:active {
+   color : #fef3a2; 
+   text-decoration : none; 
+}
+
+
+A.normal {
+   font-size : 12px; 
+   font-family : Arial, sans-serif; 
+   color : #feda47; 
+   text-decoration : none; 
+}
+
+
+A {
+   font-size : 10px; 
+   font-family : Arial, sans-serif; 
+   color : #feda47; 
+   text-decoration : none; 
+}
+
+
+.title {
+   width : 137px; 
+   height : 14px; 
+   left : 5px; 
+   position : absolute;
+   z-index: 10; 
+}
+
+
+.submenu {
+   font-size : 10px; 
+   width : 150px; 
+   left : 25px; 
+   position : absolute; 
+   visibility : hidden;
+   border: 0px; 
+}
+
+

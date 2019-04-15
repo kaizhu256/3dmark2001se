@@ -1,0 +1,629 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>3DMark Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL=stylesheet HREF="styles_ns.css" TYPE="text/css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+bName = navigator.appName;
+
+if (bName == "Explorer") {
+document.write('<LINK REL=stylesheet HREF="styles_ie.css" TYPE="text/css">');
+}
+// End --> 
+</SCRIPT>
+<base target="_self">
+</head>
+
+<body bgcolor="#BC1BOA">
+<a name="top"></a> 
+<blockquote> <BR>
+  <BR>
+  <img src="../images/o-3dmarkusage-a.gif"> 
+<p>
+<a name="guidelines"></a>
+  </p>
+
+  <h3>Official Testing Guidelines</h3>
+  <p>In order to get accurate and repeatable benchmark results, you should follow 
+    the requirements and recommendations below. These guidelines may be updated 
+    from time to time. Up-to-date guidelines are available on the <a class="normal" target="_blank" href="http://www.madonion.com/products/3dmark2001">3DMark2001 
+    SE web site</a>.</p>
+  <p>Official Testing Requirements are: </p>
+  <ul>
+    <li>Restart the computer before running the benchmark. 
+    <li>Compare 3D accelerators using the same CPU and the best (default) rendering 
+      pipeline setting. 
+    <li>Compare 3D accelerators using the the same settings - resolution, color 
+      depth, texture resolution, z-buffer format, buffering mode and full-screen 
+      anti-aliasing. 
+    <li>Compare CPUs using the exact same system configuration (where possible). 
+    <li>Exit all other programs. Under the 32-bit Windows operating systems, other 
+      tasks can preemptively run during the tests, thus affecting the results. 
+      You will want to eliminate as many of these types of tasks as possible, 
+      such as automatic updates in operating systems, e-mail clients or other 
+      tasks from your StartUp folder. This action also maximizes your available 
+      memory. 
+    <li>Disable all file sharing and possibly also all network connections. Background 
+      network activity may affect results. 
+    <li>Follow a standard testing procedure each time you run the tests. Run the 
+      tests at least three times to verify that the results are reproducible.
+  </ul>
+  <p><b>NOTE: </b>All benchmark tests are run with VSync disabled to eliminate the 
+    refresh rate dependencies along different test environments. However, older 
+    display card drivers might not support this feature. This means that it is 
+    up to you to observe whether VSync is disabled or not. </p>
+  <p>Additional Recommendations for Testing: </p>
+  <ul>
+    <li>We recommend using the default display settings, since this is the standard 
+      measurement in 3DMark2001 SE. 
+    <li>We recommend testing CPUs by running game tests with the fastest available 
+      3D accelerator, in the lowest possible resolution. 
+    <li>We recommend that you use the same monitor and monitor settings for all 
+      tested 3D accelerators. 
+    <li>We recommend that you test on a "clean" system only. You should use a 
+      program like "Norton Ghost" (http://www.ghost.com) to restore a clean system 
+      for every test case.
+    <li>We recommend that you disable the System Restore feature on Windows ME. 
+      For more information, please see Microsoft Knowledge Base article Q267951. 
+  </ul>
+
+  <p>These measures help to ensure that your results are consistent.</p>
+  <p><b>NOTE: </b>3DMARK2001 SE BENCHMARK RESULTS ARE COMPARABLE WITH 3DMARK2001 
+    RESULTS, BUT INCOMPATIBLE WITH ANY PREVIOUS VERSIONS OF 3DMARK.</p>
+  <p>
+<a name="mainwindow"></a>
+</p>
+  <h3>The Main Window</h3>
+  <p> <img src="../images/s-main-window.jpg" width="390" height="363"> 
+  <p> 
+  <p>The buttons in the lower right corner are the most important buttons in 3DMark2001 
+    SE. They start the Benchmark run, the Demo and the Game Demo. The Benchmark 
+    button always starts the benchmark using the selected display settings and 
+    selected tests. After startup the default settings are active, which means 
+    that all of the tests are selected and the <a class="normal" href="#defaultsettings">default 
+    display settings</a> are used.</p>
+  <p>The Demo button opens a dialog, which asks if the demo should be run using 
+    the selected display settings or if a lower resolution should be used. If 
+    your system meets the <a class="normal" href="index.htm#system">minimum system 
+    requirements</a> of 3DMark2001 SE, we recommend the lower resolution for a 
+    higher frame rate and a better experience. If your system meets the <a class="normal" href="index.htm#system">recommended 
+    system</a> suggestions, we recommend running the demo using the default display 
+    settings or turning on Full-Scene Anti-Aliasing (FSAA), if available. When 
+    you run the demo using selected settings, all of the settings in the <a class="normal" href="3dmarkusage.htm#dsettings">Display 
+    Settings dialog</a> will be used.</p>
+  <p>The Game Demo button starts the interactive game demo. It is the first game 
+    test, with the car being chased by flying hunter robots, but this time you 
+    control the car. Drive around and shoot down all flying robots using the <a class="normal" href="quickstart.htm#play">control 
+    keys</a>. The game demo is only available in the registered Pro version of 
+    3DMark2001 SE.</p>
+  <a name="description"></a><br>
+  <br>
+  <h3>Project Description</h3>
+  <p>A file with saved results of a benchmark run is called a project. A project 
+    also contains your system info and the display settings used during the benchmark 
+    run. It is a good idea to save the project with a descriptive file name. You 
+    can also give the project a name and some more extensive comments in order 
+    to make it easier for you to remember the conditions of that particular benchmark 
+    run. The project name and comments can be edited by clicking the Edit button 
+    in the Project frame of the main window.</p>
+  <a name="selecttests"></a><br>
+  <br>
+  <h3>Select Tests</h3>
+  <p>By default all of the tests are selected, but you can also choose to run 
+    only certain tests. For example the 3DMark score requires only that all the 
+    game tests are selected. Select the tests to be run by clicking the Change 
+    button in the Select Tests frame.</p>
+  <p> <img src="../images/s-select-tests-window.jpg" width="277" height="370"> 
+  <p> 
+  <p>The Select Tests dialog has two tabs. The Normal view shows the tests in 
+    their logical groups. Uncheck a checkbox to run the next benchmark without 
+    that group of tests. The Custom view shows all the test groups and all the 
+    separate tests included in those groups. So you can for example choose to 
+    run the <a class="normal" href="tests.htm#bumpmapping">Environment Bump Mapping</a> 
+    test, but skip the <a class="normal" href="tests.htm#dot3">DOT3</a> Bump Mapping 
+    test.</p>
+  <a name="options"></a><br>
+  <br>
+  <h3>Options</h3>
+  <p>Click the Change button of the Options frame to modify benchmark, demo and 
+    game demo options. You can set the following options from the Options dialog:</p>
+  <ul>
+    <li><b>Benchmark - Disable title screens between tests.</b> Check the checkbox, 
+      if you don't want to see the title screens between the tests, which are 
+      displayed while the next test loads. This might make the whole benchmark 
+      run take less time, because it takes less time to load some tests than the 
+      time the title screen is displayed. The title screen is displayed a minimum 
+      of 4 seconds in order to give the user time to read the text. On some systems 
+      the title screen is visible less than 4 seconds due to a slow syncronization 
+      of the monitor between a test and the next title screen.</li>
+    <li><b>Benchmark - Looping.</b> Here you can set the benchmark to loop infinitely. 
+      This feature is useful if you want to use 3DMark2001 SE as demonstration 
+      software at a tradeshow or in a PC hardware store. 
+    <li><b>Benchmark - Repeat.</b> You can select how many times you want to repeat 
+      each test in the benchmark run or in the batch run. The given result will 
+      be an average of all those runs. 
+    <li> <b>Demo - Disable sounds.</b> If you want to run or loop the demo without 
+      sounds, you can turn down the sound of your system, or you can check this 
+      checkbox. 
+    <li><b>Demo - Looping.</b> The demo will loop infinitely if you check this 
+      checkbox. This feature is useful if you want to use 3DMark2001 SE as demonstration 
+      software at a tradeshow or in a PC hardware store. 
+    <li><b>Game - Disable Sound Effects. </b> If you want to play the interactive 
+      game demo without the soundeffects of the engine, tires, enemy fire and 
+      explosions, just check this checkbox. 
+    <li><b>Game - Disable Music.</b> There is background music in the game demo. 
+      If you want to play the game demo without the music, just check this checkbox. 
+    <li> <b>Game - Detail Level.</b> You can select if you want to run the game 
+      demo in low or high graphical detail level. These detail levels match the 
+      ones of <a class="normal" href="tests.htm#gametests"> game test 1</a> of 
+      the benchmark run, except for the dynamic shadows. In the low detail test 
+      of the benchmark, there are no dynamic shadows, but in the game demo all 
+      movable objects have dynamic shadows. This is because the low detail game 
+      test should work well also on older systems that cannot do the shadows in 
+      hardware, but would take too bad a performance hit of doing the shadows 
+      in software. Still, it's not the same without the shadows, so we have those 
+      in the game demo also in low detail. Also, the huge walker is not present 
+      in the game demo, since it would have required a substantial amount of work 
+      to add all interactions with a live player. 
+  </ul>
+ 
+ <a name="dsettings"></a><br>
+  <br>
+  <h3>Display Settings</h3>
+  <p>Click the Change... button in the Display and CPU settings frame to open 
+    the Display Settings dialog. All tests in the benchmark run will use these 
+    settings. The demo and game demo also use these settings if you choose to 
+    run them with the selected settings. Alternatively you can choose to run them 
+    in 640x480 resolution to get a better frame rate.</p>
+  <b>Rendering Platform</b><br>
+  If you have more than one active 3D accelerated graphics card installed, this 
+  is where you can select which one to use in the benchmark run. You may see two 
+  identical selections if you have a card that can support a dual-monitor setup. 
+  <p> <b>Display settings and color depth</b><br>
+    Changes to screen resolution and color depth can be done here. The resulting 
+    frame rate will be higher, when using a lower resolution, but when watching 
+    the frames carefully, you might see the pixels due to their relatively large 
+    size. In higher resolution the pixels are smaller and the frames look better. 
+    The frames also look better when using 32 bit colors. In 16 bit color mode 
+    you might see edges between the different colors especially in places with 
+    color gradients. The available resolutions and color depths are dependent 
+    on what the graphics card driver offers. The default resolution is 1024x768 
+    with 32 bit colors. 
+  <p> <b>Anti-Aliasing</b><br>
+    Use the Antialiasing drop-down control to enable Full-Scene Anti-Aliasing 
+    (FSAA) and to select the FSAA quality setting. The benchmark result will be 
+    far lower, when using FSAA, especially when using higher quality FSAA. However, 
+    the graphics on the screen will look better when FSAA is used. Due to the 
+    high impact of FSAA on the performance, FSAA is disabled by default. Also, 
+    different cards might produce FSAA of different quality, and this is something 
+    we don't have a reliable way to measure. 
+  <p> <b>NOTE!</b> It is up to your graphics card drivers, which FSAA options 
+    can be selected here. Some drivers don't allow FSAA setting changes through 
+    the standard DX8 interface. In such cases you must change the FSAA settings 
+    from the display settings in the Windows Control Panel. Additionally, different 
+    cards might produce FSAA of different quality. You can compare the FSAA quality 
+    with the Image Quality tests in Resultbrowser2001 SE that is included in 3DMark2001 
+    SE Pro. 
+  <p> <b>Frame Buffer</b><br>
+    The Frame Buffer selector chooses how many frame buffers are used. A double 
+    frame buffer means that there is one back buffer for the 3D accelerator to 
+    draw to, while the previous frame is being displayed. A triple buffer shows 
+    one frame, while there are two back buffers to draw to. The 3DMark2001 SE 
+    benchmark runs with vertical synchronization (vsync) turned off, which means 
+    that there should not be much difference in the result whether you use a double 
+    or triple frame buffer. The default is double buffer, due to the lower graphics 
+    card memory consumption. Many games use a triple buffer, because vsync is 
+    on by default and there might be time to draw more than one frame while the 
+    previous frame is being displayed. This can make the frame rate steadier, 
+    resulting in smoother looking action. 
+  <p> <b>Texture Format </b><br>
+    You can choose between 16 or 32 color bit textures and, if your card supports 
+    it, you can also use compressed textures. The advantage of texture compression 
+    in 3DMark2001 SE is that the compressed textures are four times larger than 
+    the uncompressed textures. This higher texture resolution makes the textured 
+    3D objects look much more detailed and realistic. The reason for a lower texture 
+    resolution in uncompressed textures is that uncompressed textures in higher 
+    resolution would make the overall requirements for texture memory higher than 
+    what is currently available in many of the graphics cards in use today. This 
+    would mean that textures would be transferred between the graphics card and 
+    the system memory or possibly the hard drive in the middle of the benchmark 
+    run. This kind of texture swapping would seriously decrease the frame rate 
+    of the benchmark tests. 
+  <p> 3DMark2001 SE uses standard DirectX Texture Compression (DXTC), which is 
+    also known as S3TC. Only formats 1 and 3 of DXTC are used, but both of these 
+    must be supported in order for 3DMark2001 SE to take advantage of DXTC. If 
+    the graphics card supports DXTC, it will be selected by default; otherwise 
+    32 bit textures will be selected.
+  <p><b>NOTE: </b>3DMark2001 SE has a new option: DXTC1 only. This setting is 
+    by default selected for graphics cards supporting DXTC1 but not DXTC3. With 
+    this setting DXTC1 is used for non-transparent textures, and 32 bit uncompressed 
+    and downscaled transparent textures.
+  <p> <b>Z-Buffer Depth</b><br>
+    Most graphics card drivers allow you to select between 16, 24 and 32 bit Z-buffer. 
+    Some offer all of these and others only 16 and 24. A smaller Z-buffer might 
+    show some Z-artifacts (some flickering thin or smaller objects further from 
+    the camera in the 3D scene). This flickering is due to the inaccurate Z-buffer 
+    - the card cannot decide which object is closest to the camera and should 
+    be displayed in front of the others. 
+  <p> <b>Rendering Pipeline</b><br>
+    There are some options on how to render the frames. Older systems do the transformation 
+    and lighting (T&L) of the geometry using the system CPU. This is what is done 
+    when using the D3D Software T&L pipeline. Modern graphics cards can do T&L 
+    in the graphics processor, and this is called Hardware T&L (HWTL). 
+  <p> DX8 introduced a new rendering pipeline, the Pure Hardware T&amp;L (PureHAL, 
+    Pure Hardware Abstraction Layer). This pipeline places higher demands on the 
+    graphics card, but is faster than the Hardware T&L (HAL) pipeline. 
+  <p> The best rendering pipeline supported by your system is used by default. 
+    The ranking order is the following: 
+  <ol>
+    <li>D3D Pure Hardware T&amp;L
+    <li>D3D Hardware T&L 
+    <li>D3D Software T&L 
+  </ol>
+  <p> <b>NOTE!</b> Only those rendering pipelines supported by your system will 
+    be displayed. If your system should for example be able to use Hardware T&amp;L, 
+    but the drop down selector does not offer this option, there is something 
+    wrong with your system setup, most likely with your graphics card drivers. 
+  <p> <a name="dperformance"></a><br>
+    <br>
+  <h3>Display Settings and Performance</h3>
+  <p>All display settings follow the same rule, when inspecting how these settings 
+    affect the system performance. All higher values produce an animation (real 
+    time) of better quality in one way or another. The downside is that settings 
+    of higher values will cause a higher consumption of graphics card memory and/or 
+    more data needs to be transferred between the memory and processor of the 
+    graphics card. Some settings cause simply more work for the graphics processor 
+    or the CPU. All higher values more or less impact the performance negatively.</p>
+  <a name="defaultsettings"></a><br>
+  <br>
+  <h3>Default Settings</h3>
+  <p>The default settings of 3DMark2001 SE are as follows:</p>
+  <ul>
+    <li>1024 x 768 resolution 
+    <li>32 bit colors 
+    <li>Compressed textures (or 32-bit textures if DXTC is not available)
+    <li>32 or 24 bit Z-buffer 
+    <li>Double frame buffer 
+    <li>VSYNC off (if the display driver allows) 
+    <li>FSAA off (if the display driver allows) 
+    <li>The best rendering pipeline supported by your system 
+    <li>All of the tests selected 
+    <li>Demo sound effects and music on and looping turned off 
+    <li>Low detail graphics in the game demo and both music and sounds effects 
+      on 
+  </ul>
+  <a name="results"></a><br>
+  <br>
+  <h3>Benchmark results</h3>
+  <p> <img src="../images/s-orb-button.jpg" width="344" height="230"> 
+  <p> 
+  <p>When the benchmark run is complete, the Overall Score dialog shows your score. 
+    Below the 3DMark score is the button for accessing the <a class="normal" href="http://gamershq.madonion.com/products/orb/" target="_blank">Online 
+    ResultBrowser</a> (ORB). 3DMark2001 SE gives separate scores for each of the 
+    tests, but calculates the 3DMark score from the measured average frame rates 
+    of the game tests. </p>
+  <p><b>The 3DMark score is calculated using the following formula:</b></p>
+  <p>3DMark score = (Game1LowDetail + Game2LowDetail + Game3LowDetail) * 10 + 
+    (Game1HighDetail + Game2HighDetail + Game3HighDetail + Game4) * 20</p>
+  <p>Game1LowDetail means the average frame rate of the first game test in low 
+    detail etc.</p>
+  <p>You can view the frame rates of the separate game tests and the results of 
+    the theoretical tests with the Online ResultBrowser. You can also view the 
+    result details by clicking the Show Details button, but the ORB contains many 
+    other services with valuable information about your system, which cannot be 
+    obtained off-line.</p>
+  <p>The specific tests and their result units are listed below:</p>
+  <ul>
+    <li>Game tests - fps (frames / second) 
+    <li>Fill rate - MegaTexels (million texels / second) 
+    <li>High polygon count - MegaPolygons (million polygons / second) 
+    <li>Bump mapping - fps 
+    <li>Vertex shader - fps 
+    <li>Pixel shader - fps 
+    <li>Advanced Pixel shader - fps 
+    <li>Point sprites - MegaSprites (million point sprites / second)
+    <li>Image quality - this test produces sample images to be viewed with <a class="normal" href="profeatures.htm#resultbrowser">ResultBrowser2001 
+      SE </a> 
+  </ul>
+<!--
+  <a name="cputest"></a><br>
+  <br>
+  <h3>CPU Test</h3>
+  <p>This is a separate test, which gives the frame rate of the test directly 
+    after the test run. Click the CPU test button in the main window to run the 
+    CPU test. The details of the CPU test can be found <a class="normal" href="tests.htm#cputests">here</a>. 
+    The CPU test always uses 640 x 480 resolution and the best available custom 
+    CPU rendering pipeline. If your CPU supports none of the available custom 
+    pipelines, the D3D software T&L pipeline is used in the test. The CPU test 
+    result is the average frame rate of the test run and the unit of measurement 
+    is fps.</p>
+  <p>Newer CPUs have special instructions for speeding up the T&L. The so called 
+    custom pipelines use these CPU instructions for speeding up the T&L. The custom 
+    pipelines available in 3DMark2001 as follows (in alphabetical order):<br>
+  </p>
+  <ul>
+    <li>AMD Athlon 
+    <li>Intel Pentium 4 
+    <li>Intel Pentium III 
+  </ul>
+-->
+<a name="systeminfo"></a><br>
+  <br>
+  <h3>System Info</h3>
+  <p> <img src="../images/s-system-info-window.jpg" width="404" height="296"> 
+  <p> 
+  <p>System Info shows you the hardware setup of your PC in detail. Click the 
+    System Info button in the main window of 3DMark2001 SE to view your system 
+    info. System Info works the following way: Choose from the nodes in the tree 
+    structure to the left what system information you want to view. Click on the 
+    desired node to show the information or double click to expand the node. The 
+    node can be minimized again by double clicking on the expanded node. The information 
+    from the expanded nodes is displayed in the text area to the right. The text 
+    area is not editable, but you can copy the displayed text by highlighting 
+    the desired text with your left mouse button pressed and then pressing Ctrl 
+    and C simultaneously. Paste the copied text by pressing Ctrl and V simultaneously. 
+    The text can be pasted to almost any text editor or mail program supported 
+    by Windows® 98/SE, ME, 2000 and XP.</p>
+  <p>System Info shows you details regarding your PC's:</p>
+  <ul>
+    <li>Windows installation 
+    <li>DirectX installation 
+    <li>CPU 
+    <li>System memory 
+    <li>Motherboard 
+    <li>Graphics card 
+    <li>Monitor 
+  </ul>
+  <p><b>NOTE! </b>3DMark2001 SE runs on a wide variety of PCs, equipped with very 
+    different hardware. We have done our very best to build a system info utility 
+    which detects any hardware we have been able to test it on. Still, it is possible 
+    that your PC contains for example a motherboard, which doesn't provide the 
+    CPU bus clock speed or amount of memory in the format our system info expects. 
+    Should you find yourself in this situation, please check our <a class="normal" target="_blank" href="http://www.madonion.com/support">FAQs</a> 
+    for more information.</p>
+  <p><a name="commandline"></a><br>
+    <br>
+  </p>
+  <h3>Command Line Switches</h3>
+  <p>All available command line options are presented in a window, when you start 
+    3DMark2001 SE with the switch /help. This can be done in at least two ways:</p>
+  <ol>
+    <li>Drag the 3DMark2001SE.exe file or the 3DMark2001 SE desktop shortcut to 
+      the Run dialog of your Start menu. Press the Start button on your desktop 
+      and then select Run to open the Run dialog. When the 3DMark2001 SE file 
+      or shortcut is in the text field of the Run dialog, move the cursor to the 
+      end of the text, add a space, type /help and click OK. 
+    <li>Edit the 3DMark2001 SE shortcut on your desktop by clicking it with the 
+      right mouse button. Select properties and edit the Target: text field. Move 
+      the cursor to the end of the text, add a space, type /help and click OK. 
+      Next time you click the 3DMark2001 SE desktop shortcut the command line 
+      switches will be displayed. Remember to change the shortcut back to the 
+      way it was, so that you can run 3DMark2001 SE again. 
+  </ol>
+  <p>Use the command line switches the same way you used the /help switch. The 
+    command line switches are the following:</p>
+  /help - show all command line switches<br>
+  /benchmark - run the benchmark<br>
+  /demo - run the demo<br>
+  /game - run the game demo<br>
+  <p>All of these command line switches executes the specified parts of 3DMark2001 
+    SE immediately, without going through the main window.</p>
+  <p>You can also put the name of a 3DMark2001 SE project file after the switch. 
+    This will access the project or batch run file and initiate the settings you 
+    previously specified. Example: 3DMark2001SE.exe /benchmark mysettings.3dp</p>
+  <p>One good use of command line switches allows you to start the 3DMark2001 
+    SE demo automatically after Windows has booted up. Make a 3DMark2001 SE shortcut 
+    with the /demo switch and the name of a file where the demo has been set to 
+    loop. Right click on the Start Button; Open the Programs File; Click on the 
+    Start-Up Folder and copy your new 3DMark2001 SE shortcut to this folder. Then 
+    every time the PC is booted-up, the 3DMark2001 SE demo starts looping automatically.</p>
+  <a name="menubar"></a><br>
+  <br>
+  <h3>Menu Bar</h3>
+  <p>The explanations of the menu bar items are as follows: </p>
+  <TABLE cellpadding="1" cellspacing="0" border="0" width="500">
+    <tr> 
+      <td colspan="2"><b>File</b></td>
+    </tr>
+    <tr> 
+      <td>New</td>
+      <td>Open a new benchmark project. Resets settings to default.</td>
+    </tr>
+    <tr> 
+      <td>Open…</td>
+      <td>Open a saved 3DMark project file.</td>
+    </tr>
+    <tr> 
+      <td>Save</td>
+      <td>Save 3DMark results and settings in a project file.</td>
+    </tr>
+    <tr> 
+      <td>Save As…</td>
+      <td>Save 3DMark results and settings in a specified project file.</td>
+    </tr>
+    <tr> 
+      <td colspan="2">-</td>
+    </tr>
+    <tr> 
+      <td>(1 - 4 recent files)</td>
+      <td>Open one of the 4 most recent 3DMark settings files.</td>
+    </tr>
+    <tr> 
+      <td colspan="2">-</td>
+    </tr>
+    <tr> 
+      <td>Exit</td>
+      <td>Exit 3DMark2001 SE.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Edit</b></td>
+    </tr>
+    <tr> 
+      <td>Project Description…</td>
+      <td>Open the Project Description dialog.</td>
+    </tr>
+    <tr> 
+      <td>Selected Tests…</td>
+      <td>Open the Selected Tests dialog.</td>
+    </tr>
+    <tr> 
+      <td>Run Options…</td>
+      <td>Open the Run Options dialog.</td>
+    </tr>
+    <tr> 
+      <td>Settings…</td>
+      <td>Open the Display Settings dialog.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Run</b></td>
+    </tr>
+    <tr> 
+      <td>Benchmark</td>
+      <td>Run benchmark.</td>
+    </tr>
+    <tr> 
+      <td>Demo</td>
+      <td>Run the demo.</td>
+    </tr>
+    <tr> 
+      <td>Game Demo</td>
+      <td>Run the game demo. (Only in 3DMark2001 SE Pro)</td>
+    </tr>
+    <tr> 
+      <td colspan="2">-</td>
+    </tr>
+    <tr> 
+      <td>System Info</td>
+      <td>Open system info.</td>
+    </tr>
+    <tr> 
+      <td>ResultBrowser</td>
+      <td>Run ResultBrowser2001 SE. (Only in 3DMark2001 SE Pro)</td>
+    </tr>
+    <tr> 
+      <td>Batch Run…</td>
+      <td> Start the Batch Run wizard. (Only in 3DMark2001 SE Pro)</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Default</b></td>
+    </tr>
+    <tr> 
+      <td>Reset All</td>
+      <td>Reset all settings to default.</td>
+    </tr>
+    <tr> 
+      <td colspan="2">-</td>
+    </tr>
+    <tr> 
+      <td>All Tests</td>
+      <td>Select all tests.</td>
+    </tr>
+    <tr> 
+      <td>Settings</td>
+      <td>Set the display settings to default.</td>
+    </tr>
+    <tr> 
+      <td> Options</td>
+      <td>Set the run options to default.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Online Services</b></td>
+    </tr>
+    <tr> 
+      <td>Online ResultBrowser</td>
+      <td>Access the Online ResultBrowser.</td>
+    </tr>
+    <tr> 
+      <td>Submit Saved Result</td>
+      <td>Submit a saved 3DMark benchmark result.</td>
+    </tr>
+    <tr> 
+      <td>Go To MadOnion.com</td>
+      <td>Open the MadOnion.com web site.</td>
+    </tr>
+   <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Register</b></td>
+    </tr>
+    <tr> 
+      <td>Register 3DMark2001 SE…</td>
+      <td>Register the free version of 3DMark2001 SE.</td>
+    </tr>
+    <tr> 
+      <td colspan="2"><br>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><b>Help</b></td>
+    </tr>
+    <tr> 
+      <td>3DMark2001 SE Help</td>
+      <td>Open the 3DMark2001 Help file.</td>
+    </tr>
+    <tr> 
+      <td colspan="2">-</td>
+    </tr>
+    <tr> 
+      <td>About 3DMark2001 SE…</td>
+      <td>Open the About box.</td>
+    </tr>
+  </TABLE>
+  <a name="other"></a><br>
+  <br>
+  <h3>Other functionality</h3>
+  <p><font face="Arial, sans-serif" size="2" color="#e0dcd3">You can save your 
+    customized 3DMark2001 SE settings, so that you can retrieve those settings 
+    simply by reloading a file. Save your 3DMark settings by clicking the File 
+    menu of the main window and select the Save As... menu item. A dialog will 
+    open, allowing you to choose where you'd like to save your settings. If you 
+    change your settings and want to overwrite the settings you have just saved, 
+    just click the Save menu item of the same File menu.</font></p>
+  <p><font face="Arial, sans-serif" size="2" color="#e0dcd3">The 3DMark settings you can customize include:</font></p>
+  <font face="Arial, sans-serif" size="2" color="#e0dcd3">
+  <ul>
+    <li>Project name and comments 
+    <li>Selected tests 
+    <li>Benchmark and demo options, like looping and enabling sounds 
+    <li>Display and CPU settings 
+    <li>Batch run settings 
+  </ul>
+  </font>
+  <p><font face="Arial, sans-serif" size="2" color="#e0dcd3">You can take screenshots 
+    by pressing the F12 key during any of the tests and the demos. The screenshot 
+    will be saved in the 3DMark2001 SE installation folder in .BMP format.</font></p>
+  <p><font face="Arial, sans-serif" size="2" color="#e0dcd3"><b>NOTE:</b> Taking 
+    a screenshot affects your test result by a temporary performance drop. Therefore 
+    the result of the current test will be discarded, when you take a screenshot.<br>
+    </font><BR>
+    <BR>
+    <a href="#top"><img src="../images/topofpage.gif" width=117 height=18 border=0 alt=""></a>&nbsp;&nbsp;&nbsp; 
+    <a href="profeatures.htm"><img src="../images/next.gif" width=44 height=18 border=0 alt=""></a> 
+    <BR>
+    <BR>
+    <BR>
+  </p>
+</blockquote>
+</body>
+</html>

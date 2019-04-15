@@ -1,0 +1,495 @@
+<html>
+<head>
+<title>3DMark Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL=stylesheet HREF="styles_ns.css" TYPE="text/css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+bName = navigator.appName;
+
+if (bName == "Explorer") {
+document.write('<LINK REL=stylesheet HREF="styles_ie.css" TYPE="text/css">');
+}
+// End --> 
+</SCRIPT>
+<base target="_self">
+</head>
+
+<body bgcolor="#BC1BOA">
+<a name="top"></a> 
+<blockquote> <br>
+  <br>
+  <img src="../images/o-thetests-a.gif"> 
+  <p>3DMark®2001 SE contains a number of tests divided into different categories. 
+    There are game tests, theoretical tests, feature tests and image quality tests 
+    (image quality tests are available only in the Pro version of 3DMark2001 SE). 
+  </p>
+  <p><b>Game Tests</b><br>
+    The game tests give the actual 3DMark score, which is the standard measurement 
+    of PCs' 3D game performance. When running the game tests, 3DMark2001 SE keeps 
+    track of the frame rate and calculates an average frame rate after the test 
+    is run.</p>
+  <p><b>The 3DMark overall score is based on the four game tests only. For more 
+    information, see the <a href="3dmarkusage.htm#results" class="normal">benchmark 
+    results section</a>.</b></p>
+  <p>The game tests are short runs of a number of different types of scenes that 
+    simulate future games. The game tests produce the same workload for your PC 
+    as real 3D games do, because they use a real 3D game engine. One of the game 
+    tests is made even more game-like by using real-time physics and artificial 
+    intelligence. With additional effort, all of these game tests could be made 
+    into full games. Still, when running short tests and measuring the performance, 
+    we don't need a huge 3D world to play through, a game scheme and a storyline, 
+    or any game controls. However, to prove to our users that all these tests 
+    can be made into a game, we have added a game demo, where one of the game 
+    tests is equipped with game controls.</p>
+  <p><b>Theoretical and Feature Tests</b><br>
+    Traditionally benchmarks in our 3DMark series have also included a number 
+    of theoretical tests, designed to measure the performance of some particular 
+    quality of your PC's graphics hardware. 3DMark2001 SE also includes these 
+    and we have concentrated on the most essential performance qualities of 3D 
+    hardware: fill rate and polygon throughput. Additionally, there are some feature 
+    tests. First, there are bump mapping tests demonstrating <a class="normal" href="#bumpmapping">environment 
+    bump mapping</a> and <a class="normal" href="#dot3">Dot product 3 bump mapping</a> 
+    (DOT3). Then there are what we call <a class="normal" href="#dx8tests">DirectX®8 
+    (DX8) feature tests</a>. These show new features in DX8, which are demonstrated 
+    for people curious about the differences between DX8 and earlier versions. 
+    They are also a good way for people with DX8 graphics hardware to confirm 
+    that the hardware does what it should. The tests measure frame rate, which 
+    shows the difference in speed between hardware acceleration and software emulation. 
+    These frame rate results can also be used for comparing performance between 
+    DX8 graphics hardware, but our main goal when developing these tests was to 
+    demonstrate these new DX8 features.</p>
+  <a name="gametests"></a><br>
+  <br>
+  <h3>Game Tests</h3>
+  <p> <img src="../images/s-game1-screens.jpg" width="320" height="240"> 
+  <p> <b>Game Test 1 - Car Chase</b><br>
+    It's a futuristic scene with hostile robots attacking Earth. The insurgence 
+    has been going on for some time, as witnessed by the destroyed houses and 
+    trashed cars littering the post-apocalyptic landscape. But it isn't over! 
+    A small group of people are still fighting back, standing their ground with 
+    battle-weary pick-up trucks armed with homing missiles.In addition to the 
+    flying robots, there is a huge walker, scanning the horizon with searchlights 
+    and shooting at anything that moves. The trucks swerve to evade enemy fire 
+    and bravely shoot back. 
+  <p>This game test uses Ipion real-time physics by Havok (<a class="normal" target="_blank" href="http://www.havok.com">www.havok.com</a>) 
+    for the truck movements, which means that tire friction during acceleration, 
+    breaking and skidding looks and feels right. Also the car suspension works 
+    with the real-time physics. The hostile flying robots use artificial intelligence 
+    when chasing and firing at the car. All of this means that this game test 
+    is more game-like than any game test in the 3DMark series.</p>
+  <p>The high detail scene has the following additions compared to the low detail 
+    scene:</p>
+  <ul>
+    <li>Dynamic shadows for all non-static objects 
+    <li>Spotlight highlights on objects lit by robot searchlights
+    <li>Tons of additional objects 
+    <li>Objects have more details
+    <li>The terrain has a third texture layer
+    <li>More flying robots 
+  </ul>
+  <p>Technical details: 
+  <ul>
+    <li>The red truck is gloss mapped (requires 3 texture layers) 
+    <li>The dynamic shadows are done by rendering into textures. If rendering 
+      to textures is not supported by hardware, shadows are rendered with the 
+      CPU. 
+    <li>Transformation of the dynamic shadow polygons is done using a vertex shader. 
+    <li>The car wrecks and some houses have two texture layers, otherwise objects 
+      are single textured. 
+    <li>The landscape has two texture layers in low detail, three in high detail. 
+    <li> Most objects have collisions and physics enabled.
+  </ul>
+  <p>Low detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 19755/34119.8/143422 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 7.5/8.8/17.3 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 15.0/17.7/30.6 
+      MB 
+    <li>Rendered textures per frame with compressed textures (min/avg/max): 10.7/12.2/21.4 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 11.5/13.5/23.4 MB 
+  </ul>
+  <p>High detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 21033/67575.8/204128 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 6.5/12.6/20.1 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 12.5/22.6/34.7 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 10.0/16.3/23.8 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 10.4/17.4/26.5 MB 
+  </ul>
+
+  <p> <b>NOTE:</b> The compressed textures are of four times higher resolution 
+    than the 16 and 32 bit textures. The texture memory consumption is still about 
+    the same in compressed and 32 bit texture mode. This clearly demonstrates 
+    the advantage of compressed textures 
+  <p> <img src="../images/s-game2-screens.jpg" width="320" height="240"> 
+  <p> <b>Game Test 2 - Dragothic</b><br>
+    A dragon and a mysterious rider attack a village and bombards it with fireballs. 
+    The panicked citizens flee the buildings and attempt to run from the village 
+    in horror! Soldiers defend the village by firing burning arrows at the dragon. 
+  <p>This game test uses a new Global Illumination (GI) system, Lumigraph by Remedy 
+    Entertainment (<a class="normal" target="_blank" href="http://www.remedy.fi">www.remedy.fi</a>) and Hybrid 
+    (<a class="normal" target="_blank" href="http://www.hybrid.fi">www.hybrid.fi</a>). Traditionally 3D games with a GI system have had a base texture, 
+    also called color texture, and a multiplicative light map. The multiplicative 
+    light map is the one that makes the corners of a room look darker than those 
+    parts, which are directly under a light source. This new GI system has an 
+    additional texture layer, an additive light map. The additive light map is 
+    for making surfaces directly under a light brighter than the color texture 
+    by itself. The animations of the dragon, the bowmen and the running people 
+    are done by morphing, using a vertex shader.</p>
+  <p>The high detail scene has the following additions compared to the low detail 
+    scene:</p>
+  <ul>
+    <li>The whole dragon is displayed, creating a heavier workload
+    <li>The village is much larger
+    <li>The additive light maps are in use. Low detail has only color maps and 
+      multiplicative lightmaps 
+    <li>Dynamic shadows on the running people
+    <li>There are bowmen shooting burning arrows 
+  </ul>
+  <p>Technical details: 
+  <ul>
+    <li>The dragon has 2 texture layers 
+    <li>The dragon and the people have been animated using vertex shader morphing 
+    <li>The dynamic shadows are done by rendering into textures
+    <li>Transformation of the dynamic shadow polygons is done using a vertex shader
+    <li>The village has two texture layers in low detail, three in high detail
+  </ul>
+  <p>Low detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 46159/51381.9/147828 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 8.0/8.8/10.1 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 15.6/17.2/19.8 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 5.9/6.8/9.0 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 5.9/6.8/9.0 MB 
+  </ul>
+  <p>High detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 81596/99806.7/342341 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 11.8/13.2/15.3 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 22.7/25.8/28.2 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 7.6/9.2/11.9 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 7.6/9.2/11.0 MB 
+  </ul>
+
+  <p><img src="../images/s-game3-screens.jpg" width="320" height="240"></p>
+  <p><b>Game Test 3 - Lobby</b><br>
+    A man walks into the lobby of a building and meets heavy resistance. Multiple 
+    "bad guys" armed with various weapons start shooting at the man, who shoots 
+    back, and together they wreck the lobby pretty badly. </p>
+  <p>This test is full of impressive characters, their textures, guns and animations. 
+    All of these are the property of Remedy Entertainment from their upcoming 
+    game, Max Payne. The lobby, the cameras, shadows, reflections and everything 
+    else was created by the 3DMark team of MadOnion.com. This scene was originally 
+    made to be only a part of the demo, but it is indeed very game-like, so we 
+    decided to make it also a game test. Don't forget to watch the demo with the 
+    whole story.</p>
+  <p>All the characters use vertex shader skinning except if your system has a 
+    DirectX7 generation 3D accelerator, capable of hardware transformation and 
+    lighting. Then skinning is done using a custom skinning technique, which does 
+    skinning on the CPU, but transforms and illuminates the skinned vertices in 
+    the graphics hardware. This technique is more efficient for such cards because 
+    a vertex shader implementation would transform and light the vertices using 
+    the CPU, which would most likely be slower. The empty shells and discarded 
+    guns are controlled by Ipion real-time physics by Havok.</p>
+  <p><b>NOTE: </b>The scene is not from Remedy's game Max Payne, and should not 
+    be used to evaluate how Max Payne will look or play.</p>
+  <p>The high detail scene has the following additions compared to the low detail 
+    scene:</p>
+  <ul>
+    <li>Everything is reflected in the marble floor.
+    <li>All characters have dynamic shadows.
+    <li>Some shots that hit the walls shatter a part of the wall surface material. 
+  </ul>
+
+  <p>Technical details: 
+  <ul>
+    <li>The room has two texture layers everywhere, one color map and a multiplicative 
+      lightmap. 
+    <li>All characters have a single texture layer. 
+    <li>The dynamic shadows are done by rendering into textures. If rendering 
+      to textures is not supported by hardware, shadows are rendered with the 
+      CPU. 
+    <li>Transformation of the dynamic shadow polygons is done using a vertex shader. 
+    <li>The reflection in the floor is done by rendering everything upside down. 
+  </ul>
+  <p>Low detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 16665/21755.1/39890 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 2.8/4.1/4.7 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 5.7/8.2/9.4 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 2.8/4.1/4.9 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 2.8/4.1/4.9 MB 
+  </ul>
+  <p>High detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 23282/41857.4/91097 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 4.8/6.0/7.1 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 7.8/10.3/12.4 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 4.8/6.1/7.2 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 4.8/6.1/7.3 MB 
+  </ul>
+
+  <p><img src="../images/s-game4-screens.jpg" width="320" height="240"> </p>
+  <b>Game test 4 - Nature</b><br>
+  It's a beautiful nature scene, with the leaves on the trees and the grass swaying 
+  in the wind. There is a small river with a man fishing and a little lake with 
+  small waves from the wind. 
+  <p>This scene depends heavily on DirectX® 8 features. The trees, grass and butterflies 
+    are animated, transformed and lit using vertex shaders. The movements of the 
+    fisherman are made by morphing, also using a vertex shader. The surface of 
+    the lake uses vertex shaders, pixel shaders and cube maps. Due to the pixel 
+    shader use, this test cannot be run without DX8 compatible graphics hardware. 
+    The scene only has a high detail run and affects the 3DMark score accordingly.</p>
+
+  <p>Technical details: 
+  <ul>
+    <li>The leaf and grass movement is done using a vertex shader.
+    <li>The fisherman animation uses morphing done with a vertex shader. 
+    <li>The butterfly flight and wing movements is done with a vertex shader. 
+    <li>The lake surface uses a pixel shader for per-pixel reflection and cube 
+      mapping <br>
+      (it uses 4 texture render states, which corresponds to 4 texture layers) 
+    <li>The small river has two separate water surfaces, both using two texture 
+      layers (color map and light map).
+    <li>The landscape, the house and the bridge has two texture layers (color 
+      map and light map).
+    <li>The leaves, grass and the fisherman have a single texture layer. 
+  </ul>
+  <p>High detail statistics: 
+  <ul>
+    <li>Rendered triangles per frame (min/avg/max): 55601/81722.5/180938 
+    <li>Rendered textures per frame with 16 bit textures (min/avg/max): 14.9/17.4/20.7 
+      MB 
+    <li>Rendered textures per frame with 32 bit textures (min/avg/max): 28.4/33.4/40.0 
+      MB 
+    <li>Rendered textures per frame with texture compression (min/avg/max): 10.4/12.0/14.6 
+      MB
+    <li>Rendered textures per frame with DXT1 compressed textures and 32 bit transparent 
+      textures (min/avg/max): 13.0/15.0/17.8 MB 
+  </ul>
+
+  <a name="theoreticaltests"></a><br>
+  <br>
+  <h3>Theoretical Tests</h3>
+  <p><img src="../images/s-fillrate-screens.jpg" width="320" height="240"></p>
+  <p><b>Fill Rate</b><br>
+    These two tests measure the fill rate of your graphics hardware. Fill rate 
+    is a measurement of how fast the graphics card is capable of drawing textures 
+    onto 3D objects. The results of the game tests are naturally dependent on 
+    the fill rate, but in this test we try to concentrate on measuring only fill 
+    rate. We do this by drawing a number of large surfaces perpendicular to the 
+    viewer that cover the whole screen and fill these objects with large textures. 
+    There are two different test runs included in the fill rate test, and they 
+    are: </p>
+  <ol>
+    <li><b>Single-Texturing: </b>There are 64 surfaces with one texture each. 
+      This means that the graphics hardware fill each of these objects separately, 
+      no matter how many texture layers that card is capable of drawing in a single 
+      pass. 
+    <li><b>Multi-Texturing:</b> We draw 64 texture layers as fast as possible. 
+      This means that we take advantage of the fact that modern cards are usually 
+      capable of drawing multiple texture layers on a single object as fast as 
+      it would draw one single layer. 64 texture layers are distributed so that 
+      each surface in use has as many texture layers as that particular card can 
+      draw in a single pass. For example, if your card can draw 8 texture layers 
+      in a single pass, then there will be 8 objects with 8 texture layers each. 
+      If your card is capable of doing 6 texture layers in a pass, there will 
+      be 10 objects with 6 layers and an 11th layer with the remaining 4 layers. 
+  </ol>
+  <p> The test result is given in million texels (texture elements, pixels in 
+    the source texture) drawn per second (MTexels/s).</p>
+  <p><b>Note: </b>This test has changed since 3DMark2000 (to be more realistic). 
+    Therefore results are not compatible with 3DMark2001 SE or the original 3DMark2001. 
+    This test is identical in 3DMark2001 SE and the original 3DMark2001, so between 
+    the two 3DMark2001 versions all scores are comparable.</p>
+  <p><img src="../images/s-highpoly-screens.jpg" width="320" height="240"></p>
+  <b>High Polygon Count</b><br>
+  This test measures the polygon throughput of the graphics hardware. Like above 
+  also this quantity is partly measured also in the game tests, but here we try 
+  to concentrate on this quantity alone. Therefore, we draw a scene with only 
+  few textures, which would limit the performance according to the fill rate, 
+  but with a large number of polygons. There are over one million polygons in 
+  this scene. The polygon throughput decreases, when there are more hardware lights 
+  and also when there are shiny surfaces in the scene done using materials with 
+  a specular reflection. There are two test runs in this test: 
+  <ol>
+    <li><b>1 light:</b> For a high throughput, we have only diffuse materials 
+      and a single directional light in this run. 
+    <li><b>8 lights:</b> We have the same scene, but the dragons are of a shiny 
+      material giving a specular reflection. There are 8 lights all in all; one 
+      directional and 7 point lights.
+  </ol>
+  <p>The test result is given in million triangles drawn per second (MTriangles/s).</p>
+  <p>&nbsp;</p>
+  <b>Bump Mapping</b><br>
+  In a way, this is a feature test. We want to show what bump mapping looks like, 
+  and we also want to prove to you that your hardware is or isn't capable of doing 
+  it. The frame rate is measured, so this test can be used for comparing bump-mapping 
+  performance. Bump mapping can not be reasonably emulated in software on DirectX, 
+  so the tests are skipped if your hardware doesn't support these types of bump 
+  mapping. If your hardware supports one type of bump mapping and not the other, 
+  the one that is supported will be displayed and the other will be skipped. There 
+  are two different bump mapping techniques displayed: 
+  <p> <a name="bumpmapping"></a> 
+  <p> <img src="../images/s-envbump-screens.jpg" width="320" height="240"> 
+  <p><b>1. Environment Mapped Bump Mapping.</b> This technique was introduced 
+    in DirectX® 6, and has been included in 3DMark2000 as well. Still, only a 
+    few graphics cards support this type of bump mapping. It appears that this 
+    is about to change as the DirectX® 8 pixel shader feature includes the requirement 
+    to perform environment mapped bump mapping. What is so special about this 
+    type of bump mapping is that we can do reflective environment mapped surfaces, 
+    which are bumped at the same time.</p>
+  <p> <a name="dot3"></a> 
+  <p><img src="../images/s-dot3-screens.jpg" width="320" height="240"> 
+  <p> 
+  <p><b>2. Dot Product 3 Bump Mapping (DOT3)</b>. This method of bump mapping 
+    was introduced in DirectX® 7. It is a mathematically more correct way to do 
+    bump mapping compared to the method described above. The basic DOT3 can only 
+    be used on diffuse surfaces. There are ways to extend DOT3 to include a specular 
+    component, but only the basic DOT3 is demonstrated here.</p>
+  <a name="dx8tests"></a><br>
+  <br>
+  <h3>DirectX 8 Feature Tests</h3>
+  <p>These four tests demonstrate some of the new features of DirectX 8 & 8.1. The 
+    pixel shader tests are skipped if the feature is not supported by your hardware. 
+    As with bump mapping, this feature can not reasonably be emulated in software. 
+    Both the Vertex Shader and the Point Sprite tests can be run even if your 
+    hardware does not support the features natively, but then they will be emulated 
+    on the CPU, making the result highly dependent on the CPU speed. All of these 
+    tests measure frame rate. The features demonstrated are the following:</p>
+  <p> <img src="../images/s-vertexshader-screens.jpg" width="320" height="240"> 
+  <p> <b>Vertex Shader</b><br>
+    Vertex shader is like DirectX® 7 hardware transformation and lighting, but 
+    with a vertex shader the developer can write a custom transformation and lighting 
+    model. While this test demonstrates a vertex shader that does skinning, vertex 
+    shaders can be used for countless other types of transformation and lighting 
+    too. There are 100 skinned characters from game test 3 running around and 
+    shooting each other. Vertex shaders can be efficiently emulated in software, 
+    therefore this test is run using a software vertex shader, if vertex shaders 
+    cannot be run in your graphics hardware. 
+  <p> <img src="../images/s-pixelshader-screens.jpg" width="320" height="240">
+  <p> <b>Pixel Shader</b><br>
+    Pixel shader is a technique for making custom per pixel lighting and other 
+    per pixel operations in a 3D scene. Bump mapping is a kind of per pixel operation, 
+    because it makes a surface look bumpy due to modifications of the pixel colors, 
+    without touching the scene geometry, or in other words the polygons of the 
+    scene. This test demonstrates a water surface drawn with a pixel shader doing 
+    environment bump mapping using a cube map. This test requires DirectX 8 compatible 
+    hardware with Pixel Shader 1.0 support. The graphics card needs to be capable 
+    of 4 texture layers in a single pass to produce this water surface in a single 
+    pass.
+  <p> <img src="../images/s-advanced-pixelshader-screens.jpg" width="320" height="240">
+  <p> <b>Advanced Pixel Shader</b><br>
+    This is a new test included in 3DMark2001 SE, and it uses Pixel Shader version 
+    1.4, introduced in DirectX 8.1. The same effect can also be achieved using 
+    Pixel Shader 1.0, but then rendering the water surface requires two passes. 
+    Graphics hardware that supports Pixel Shader 1.4 (or higher) render the water 
+    in a single pass. The water surface in this test is more realistic than in 
+    the test above. Instead of just an environment bump map reflecting a cube 
+    map, this test uses a ripple texture (traditional environment bump map), a 
+    reflection texture, a refraction texture and a Fresnel texture. The resulting 
+    effect is a water surface that has ripples from for example the wind, shows 
+    a rippled reflection and a rippled refraction (view of objects beneath the 
+    water surface) + the reflection intensity is adjusted according to the camera's 
+    angle to the water surface. For example looking perpendicularly at the water 
+    surface will show only refracted light rays, or what's under the water surface, 
+    and looking almost parallel to the water surface will show the reflection 
+    only. 
+  <p> <img src="../images/s-pointsprite-screens.jpg" width="320" height="240">
+  <p> <b>Point Sprites</b><br>
+    Point sprites are a kind of particles which have more limitations than custom 
+    particle systems, but are drawn very fast if there is hardware support for 
+    them. There are about 500000 particles simultaneously on-screen in this test 
+    and they are used for rendering a 3D model. Particles are usually used in 
+    games for effects like fire, smoke and explosions. We are using such a large 
+    number of particles that we have to use particles the size of a single pixel. 
+    If we didn't, the test would become heavily fill rate limited. 
+  <p><a name="imagequality"></a><br>
+    <br>
+  <h3>Image Quality</h3>
+  <p>This test takes a sample screenshot from each game test for closer inspection 
+    using <a class="normal" href="profeatures.htm#resultbrowser">ResultBrowser2001 
+    SE </a> (RB2001). Our RB2001 allows you to compare your card's rendering to 
+    reference images rendered using the Direct3D reference rasterizer. RB2001 
+    contains tools for zooming and making per pixel comparisons with the reference 
+    images or with renderings of other graphics hardware. This test is only available 
+    in the Pro version of 3DMark2001 SE.</p>
+<!--  
+<a name="cputests"></a><br>
+  <br>
+  <h3>CPU Test</h3>
+  <p>The CPU test measures the CPU's 3D game performance. The test runs the high 
+    detail run of the first game test, the car chase. This scene was chosen, because 
+    it contains real time physics and artificial intelligence, which both of which 
+    increase the CPU workload. The scene will always be run on the fastest compatible 
+    custom CPU pipeline, and if the system CPU does not support a custom pipeline, 
+    D3D software T&L will be used. The CPU test cannot be run using hardware T&L, 
+    because that would make the test result more dependent on the graphics processor 
+    speed. We have tried to isolate other factors affecting the score, like graphics 
+    card fill rate and overall performance, by running this scene always in 640 
+    x 480 resolution and 16 bit colors, textures and Z-buffer. Still, the score 
+    is somewhat affected by the graphics card performance. This means that you 
+    should compare different CPUs by running the CPU test on different CPUs but 
+    using the same graphics card. We have removed the shadows from this test, 
+    because they use graphics hardware acceleration on modern cards and the software 
+    fallback is less efficient.</p>
+-->
+  <p><a name="methodology"></a><br>
+    <br>
+  <h3>Test Methodology</h3>
+  <p> All tests (except for the image quality tests) measure the average framerate 
+    (rendered frames / second), like described in the list below. Some tests give 
+    a result of a different unit (Fill rate test: million texels / second), but 
+    even in these tests the frame rate is measured before the result is converted 
+    to the given unit.
+  <p>All performance tests are run the following way: 
+  <ol>
+    <li> Initialize the scene 
+    <li> Render 1-3 (depending on the test) frames for "warm-up", to download 
+      necessary textures to the texture memory of the graphics card. 
+    <li> Start the timer 
+    <li> Render as many frames as possible within n seconds 
+    <li> When n seconds is reached, draw a black triangle after all the frames 
+      in the pipeline, to ensure that all frames have been displayed
+    <li> Lock the frame buffer
+    <li> Stop the timer 
+    <li> Unlock the frame buffer 
+    <li> Calculate the result based on "NumberOfFramesRendered / Time" 
+    <li> De-initialize the scene 
+  </ol>
+ 
+ <BR>
+  <BR>
+  <a href="#top"><img src="../images/topofpage.gif" width=117 height=18 border=0 alt=""></a>&nbsp;&nbsp;&nbsp; 
+  <a href="onlineservices.htm"><img src="../images/next.gif" width=44 height=18 border=0 alt=""></a> 
+  <BR>
+  <BR>
+  <BR>
+</blockquote>
+</body>
+</html>
